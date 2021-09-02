@@ -50,6 +50,7 @@ def main():
         window.fill(BGCOLOR)
         draw_lines()
         draw_game_pieces()
+        draw_highlight(col, row)
 
         for event in pygame.event.get():
             if event.type == QUIT:
@@ -66,7 +67,6 @@ def main():
             col = int(mouseX // 100)
             row = int(mouseY // 100)
 
-            draw_highlight(col, row)
             pygame.display.update()
             
             if mouse_clicked:
